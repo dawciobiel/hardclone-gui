@@ -1,0 +1,14 @@
+[project]
+name = "hardclone"
+version = "0.1.2"
+description = "HardClone CLI & GUI disk cloner"
+dependencies = [
+    "PyQt5",
+    "psutil",
+    "rich"
+]
+requires-python = ">=3.10"
+
+[project.scripts]
+hardclone = "hardclone.cli.main_cli:main"
+hardclone-gui = "hardclone.gui.main_gui:main"
