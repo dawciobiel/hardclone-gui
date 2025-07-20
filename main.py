@@ -1,4 +1,8 @@
 
+
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2025 Dawid Bielecki
+
 """
 DD GUI Manager - Graphical interface for creating disk and partition images
 Requirements: PySide6, psutil
