@@ -1,21 +1,19 @@
-#!/usr/bin/env bash
+#!/usr/bin/env fish
 
 # Enable optional debug settings for Qt
-# export QT_DEBUG_PLUGINS=1
-# unset QT_QPA_PLATFORM_PLUGIN_PATH
+# set -x QT_DEBUG_PLUGINS 1
+# set -e QT_QPA_PLATFORM_PLUGIN_PATH
 
 # Activate Python virtual environment
-source ./.venv/bin/activate
+source ./.venv/bin/activate.fish
 
 # Run the application
 echo "Launching application..."
-python3 ./main.py
-exit_code=$?
+if not python3 ./main.py
+    echo "Application exited with an error."
+end
 
 # Always deactivate the virtual environment
 deactivate
 echo "Virtual environment deactivated."
-
-# Exit with the same status code as the application
-exit $exit_code
 
