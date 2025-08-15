@@ -9,7 +9,7 @@ source ./.venv/bin/activate.fish
 
 # Run the application
 echo "Launching application..."
-if not python3 ./main.py
+if not python3 ./hgui.py
     echo "Application exited with an error."
 end
 

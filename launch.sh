@@ -9,7 +9,7 @@ source ./.venv/bin/activate
 
 # Run the application
 echo "Launching application..."
-python3 ./main.py
+python3 ./hgui.py
 exit_code=$?
 
 # Always deactivate the virtual environment
