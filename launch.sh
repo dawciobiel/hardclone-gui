@@ -1,16 +1,18 @@
 #!/usr/bin/env bash
 
-# Enable optional debug settings for Qt
-# export QT_DEBUG_PLUGINS=1
-# unset QT_QPA_PLATFORM_PLUGIN_PATH
-
 # Activate Python virtual environment
 source ./.venv/bin/activate
 
+# Enable optional debug settings for Qt
+# export QT_DEBUG_PLUGINS=1
+
 # Run the application
 echo "Launching application..."
-python3 ./hgui.py
+sudo -E python3 ./hgui.py
 exit_code=$?
+
+# Disable debug setting for Qt
+# unset QT_QPA_PLATFORM_PLUGIN_PATH
 
 # Always deactivate the virtual environment
 deactivate
